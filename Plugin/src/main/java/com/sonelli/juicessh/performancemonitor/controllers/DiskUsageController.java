@@ -34,7 +34,7 @@ public class DiskUsageController extends BaseController {
 
                 try {
 
-                    getPluginClient().executeCommandOnSession(getSessionId(), getSessionKey(), "df | grep ' /$'", new OnSessionExecuteListener() {
+                    getPluginClient().executeCommandOnSession(getSessionId(), getSessionKey(), "df | grep ' /media/data$'", new OnSessionExecuteListener() {
                         @Override
                         public void onCompleted(int exitCode) {
                             switch(exitCode){
