@@ -28,7 +28,7 @@ public class LoadAverageController extends BaseController {
         // Wrap the load average with *'s on every other update so that you can easily see
         // when it updates if the load average doesn't change much.
 
-        final Pattern loadAvgPattern = Pattern.compile("average[s]?:\\s*([0-9.]+)"); // Heavy cpu so do out of loops.
+        final Pattern loadAvgPattern = Pattern.compile("average[s]?:\\s*([0-9,]+)"); // Heavy cpu so do out of loops.
 
         final Handler handler = new Handler();
         handler.post(new Runnable() {
