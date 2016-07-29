@@ -51,7 +51,7 @@ public class LoadAverageController extends BaseController {
                         public void onOutputLine(String line) {
                             Matcher loadAvgMatcher = loadAvgPattern.matcher(line);
                             if(loadAvgMatcher.find()){
-                                setText(loadAvgMatcher.group(1));
+                                setText(loadAvgMatcher.group(1).substring(0, setText(loadAvgMatcher.group(1).length()-1));
                             }
                         }
 
